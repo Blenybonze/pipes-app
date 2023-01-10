@@ -2,4 +2,19 @@
     <h1>{{'ola mundo' | uppercase }}</h1>
 </div>
 
-<button pButton (click)="mostrarNome()" type="button">Click</button>
+
+<button 
+    pButton 
+    class="p-button-help"
+    (click)="mostrarNome()"
+    icon="pi pi-bell" 
+    type="button">
+    Click
+</button>
+
+<p-card
+    class="card"
+    header="{{nome | uppercase}}"
+    subheader="Sub titulo">
+    Testando card
+</p-card>
