@@ -10,7 +10,4 @@ export class AppComponent {
 
   nome: string = "fernando";
 
-  mostrarNome() {
-    console.log(this.nome)
-  }
 }
