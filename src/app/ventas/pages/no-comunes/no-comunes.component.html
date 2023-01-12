@@ -17,15 +17,16 @@
                         optionValue="value">
                     </p-selectButton>
                 </div>
-
             </div>
+
             <p>
                 Ola, {{nome}} é um prazer
                 {{generoSelecionado | i18nSelect:invitationMap}}
             </p>
 
             <button [disabled]="nome === '' || generoSelecionado === ''" (click)="combinarCliente(nome)"
-                class="p-button-help" pButton label="Combinar pessoa"></button>
+                class="p-button-help" pButton label="Combinar pessoa">
+            </button>
         </p-fieldset>
     </div>
 
@@ -39,11 +40,12 @@
                 Atualmente {{clientes.length | i18nPlural:clientesMap}}.
             </p>
             <button [disabled]="!clientes.length" (click)="deletarCliente()" class="p-button-help" pButton
-                label="Cliente Atendido"></button>
+                label="Cliente Atendido">
+            </button>
         </p-fieldset>
     </div>
 
-    <div  class="p-fluid p-sm-12 p-md-6 p-lg-4 ">
+    <div class="p-fluid p-sm-12 p-md-6 p-lg-4 ">
         <p-fieldset legend="Slice Pipe" [toggleable]="true">
             <div *ngIf="!clientes.length" class="p-col-12">
                 <p>
