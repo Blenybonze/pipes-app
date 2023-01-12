@@ -1,1 +1,68 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+    <h1>Pipes Incomuns</h1>
+    <p>Pipes Incluídos em Angular - Usualmente em CommonModule</p>
+</div>
+
+<div class="p-field p-grid">
+    <div class="p-fluid p-sm-12 p-md-6 p-lg-4">
+        <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+
+            <div class="p-grid">
+                <div class="p-col p-sm-12 p-md-6 p-lg-8">
+                    <input type="text" pInputText [(ngModel)]="nome" />
+                </div>
+
+                <div class="p-col p-col p-sm-12 p-md-6 p-lg-4">
+                    <p-selectButton [options]="genero" [(ngModel)]="generoSelecionado" optionLabel="label"
+                        optionValue="value">
+                    </p-selectButton>
+                </div>
+
+            </div>
+            <p>
+                Ola, {{nome}} é um prazer
+                {{generoSelecionado | i18nSelect:invitationMap}}
+            </p>
+
+            <button [disabled]="nome === '' || generoSelecionado === ''" (click)="combinarCliente(nome)"
+                class="p-button-help" pButton label="Combinar pessoa"></button>
+        </p-fieldset>
+    </div>
+
+
+    <div class="p-fluid p-sm-12 p-md-6 p-lg-4 ">
+        <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+            <div class="p-grid">
+                {{clientes.length | i18nPlural:clientesFila}}
+            </div>
+            <p>
+                Atualmente {{clientes.length | i18nPlural:clientesMap}}.
+            </p>
+            <button [disabled]="!clientes.length" (click)="deletarCliente()" class="p-button-help" pButton
+                label="Cliente Atendido"></button>
+        </p-fieldset>
+    </div>
+
+    <div  class="p-fluid p-sm-12 p-md-6 p-lg-4 ">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <div *ngIf="!clientes.length" class="p-col-12">
+                <p>
+                    Sem clientes na fila
+                </p>
+            </div>
+
+            <div *ngIf="clientes.length" class="p-col-12">
+                <p>
+                    Vez do cliente {{clientes | slice :0:1}}
+                </p>
+            </div>
+
+            <div *ngIf="clientes.length" class="p-col-12">
+                <h3>Lista de Clientes</h3>
+                <ul *ngFor="let cliente of clientes">
+                    <li>{{cliente}}</li>
+                </ul>
+            </div>
+        </p-fieldset>
+    </div>
+</div>
