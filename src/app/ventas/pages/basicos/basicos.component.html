@@ -5,12 +5,50 @@
 
 <div class="p-grid">
     <div class="p-col-4">
-        <p-card>1</p-card>
+        <p-card header="uppercase" [subheader]="nomeLower | uppercase">
+            {{nomeLower | uppercase}}
+        </p-card>
     </div>
     <div class="p-col-4">
-        <p-card>2</p-card>
+        <p-card header="uppercase" [subheader]="nomeUpper | lowercase">
+            {{nomeUpper | lowercase}}
+        </p-card>
     </div>
     <div class="p-col-4">
-        <p-card>3</p-card>
+        <p-card header="uppercase" [subheader]="nomeCompleto | titlecase">
+            {{nomeCompleto | titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>Pipe para tratar as Fechas</p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4 md-col-5">
+        <p-card>
+            <ul>
+                <li>fecha </li>
+                <li>fecha | date</li>
+                <li>fecha | date:'short'</li>
+                <li>fecha | date:'long'</li>
+                <li>fecha | date:'MMMM'</li>
+                <li>fecha | date:'MMMM dd,YYYY'</li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="p-col-8">
+        <p-card>
+            <ul>
+                <li>{{fecha}}</li>
+                <li>{{fecha | date}}</li>
+                <li>{{fecha | date:'short'}}</li>
+                <li>{{fecha | date:'long'}}</li>
+                <li>{{fecha | date:'MMMM'}}</li>
+                <li>{{fecha | date:'MMMM dd,YYYY'}}</li>
+            </ul>
+        </p-card>
     </div>
 </div>
