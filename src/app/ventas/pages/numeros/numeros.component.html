@@ -1,1 +1,25 @@
-<p>numeros works!</p>
+<div class="text-layout">
+    <h1>Decimal Pipe e Porcentagens</h1>
+    <p>Pipes Incluídos em Angular - Usualmente em CommonModule</p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="Numeros e Decimais" subheader="do ano presente">
+            <i class="pi pi-dollar"></i>
+            {{numeroPadrao | number:'1.2-2'}}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Currency(Moeda)" subheader="do ano presente">
+            {{numeroPadrao + 2000000 | currency:'BRL':'':'1.2-2'}}
+        </p-card>
+    </div>
+
+    <div class="p-col-4">
+        <p-card header="Porcentagem" subheader="do ano presente">
+            {{porcentagem | percent:'2.2-2'}}
+        </p-card>
+    </div>
+</div>
