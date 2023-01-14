@@ -41,8 +41,8 @@ export class IncomunsComponent {
   }
   clientesFila = {
     '=0': 'não temos nenhum cliente',
-    '=1': 'Um cliente chegou',
-    'other': '# Clientes chegaram'
+    '=1': 'Um cliente',
+    'other': '# clientes'
   }
   clientesVez = {
     '=0': 'Fila vazia',

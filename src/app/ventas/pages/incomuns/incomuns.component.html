@@ -55,14 +55,14 @@
 
             <div *ngIf="clientes.length" class="p-col-12">
                 <p>
-                    Vez do cliente {{clientes | slice :0:1}}
+                    Vez do cliente {{ clientes | slice :0:1 }}
                 </p>
             </div>
 
             <div *ngIf="clientes.length" class="p-col-12">
                 <h3>Lista de Clientes</h3>
                 <ul *ngFor="let cliente of clientes">
-                    <li>{{cliente}}</li>
+                    <li>{{cliente | titlecase}}</li>
                 </ul>
             </div>
         </p-fieldset>
