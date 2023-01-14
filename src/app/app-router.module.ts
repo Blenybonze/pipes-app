@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BasicosComponent } from './ventas/pages/basicos/basicos.component';
 import { NumerosComponent } from './ventas/pages/numeros/numeros.component';
-import { NoComunesComponent } from './ventas/pages/no-comunes/no-comunes.component';
+import { IncomunsComponent } from './ventas/pages/incomuns/incomuns.component';
 import { OrdenarComponent } from './ventas/pages/ordenar/ordenar.component';
 
 const routes: Routes = [
@@ -19,7 +19,7 @@ const routes: Routes = [
   },
   {
     path: 'no-comunes',
-    component: NoComunesComponent,
+    component: IncomunsComponent,
   },
   {
     path: 'ordenar',
