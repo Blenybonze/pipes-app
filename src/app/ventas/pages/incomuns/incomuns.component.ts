@@ -49,7 +49,6 @@ export class IncomunsComponent {
     '=1': 'Cliente #',
   }
 
-
   adicionarCliente(nome: string) {
     this.clientes.push(nome)
     this.nome = '';
@@ -86,7 +85,6 @@ export class IncomunsComponent {
 
   //Async Pipe
   meuObservable = interval(1000); //0,1,2,3
-
   valorPromessa = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve('Fim da Promessa');
