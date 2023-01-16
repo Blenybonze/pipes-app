@@ -11,6 +11,8 @@ import { IncomunsComponent } from './pages/incomuns/incomuns.component';
 import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 
+import { MaiusculasPipe } from './pipes/maiusculas.pipe';
+
 
 
 @NgModule({
@@ -18,7 +20,8 @@ import { OrdenarComponent } from './pages/ordenar/ordenar.component';
     NumerosComponent,
     IncomunsComponent,
     BasicosComponent,
-    OrdenarComponent
+    OrdenarComponent,
+    MaiusculasPipe
   ],
   exports: [
     NumerosComponent,
