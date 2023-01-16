@@ -6,9 +6,10 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class MaiusculasPipe implements PipeTransform {
 
-
-    transform(value: string, ...args: any[]): string {
-        return value.toLocaleUpperCase();
+    transform(value: string, eMaiusculas: boolean = true): string {
+        return eMaiusculas
+            ? value.toLocaleUpperCase()
+            : value.toLocaleLowerCase() ;
     }
 
 }

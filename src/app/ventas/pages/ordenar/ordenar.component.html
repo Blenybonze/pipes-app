@@ -1,4 +1,7 @@
 <div class="text-layout">
     <h1>Pipes personalizados</h1>
-    <p>Pipes {{'criados' | maiusculas}}</p>
+    <p>Pipes {{'criados' | maiusculas:eMaiuscula}}</p>
+
+    <button (click)="aplicarMaiuscula()" class="p-button-help" pButton label="Lower / Upper">
+    </button>
 </div>

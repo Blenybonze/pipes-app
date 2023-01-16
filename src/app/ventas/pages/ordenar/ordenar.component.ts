@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./ordenar.component.css']
 })
 export class OrdenarComponent {
+  eMaiuscula: boolean = true;
 
+  aplicarMaiuscula() {
+    this.eMaiuscula = !this.eMaiuscula;
+  }
 }
