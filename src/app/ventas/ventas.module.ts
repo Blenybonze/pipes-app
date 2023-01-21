@@ -12,6 +12,8 @@ import { BasicosComponent } from './pages/basicos/basicos.component';
 import { OrdenarComponent } from './pages/ordenar/ordenar.component';
 
 import { MaiusculasPipe } from './pipes/maiusculas.pipe';
+import { VoaPipe } from './pipes/voa.pipe';
+import { OrdenarPipe } from './pipes/ordenar.pipe';
 
 
 
@@ -21,7 +23,11 @@ import { MaiusculasPipe } from './pipes/maiusculas.pipe';
     IncomunsComponent,
     BasicosComponent,
     OrdenarComponent,
-    MaiusculasPipe
+
+    //pipes
+    MaiusculasPipe,
+    VoaPipe,
+    OrdenarPipe
   ],
   exports: [
     NumerosComponent,
