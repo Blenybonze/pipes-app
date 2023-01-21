@@ -6,9 +6,19 @@ import { Heroi } from '../pages/interfaces/ventas.interfaces';
 })
 export class OrdenarPipe implements PipeTransform {
 
-  transform(heroi: Heroi[], ...args: string[]): Heroi[] {
-    heroi = heroi.sort((a, b) => (a.nome > b.nome) ? 1 : -1)
-    return heroi;
+  transform(herois: Heroi[], ordenarPor: string): Heroi[] {
+
+    switch (ordenarPor) {
+      case 'nome':
+        return herois.sort((a, b) => (a.nome > b.nome) ? 1 : -1)
+      case 'voa':
+        return herois.sort((a, b) => (a.voa > b.voa) ? 1 : -1)
+      case 'cor':
+        return herois.sort((a, b) => (a.cor > b.cor) ? 1 : -1)
+
+      default:
+        return herois;
+    }
   }
 
 }

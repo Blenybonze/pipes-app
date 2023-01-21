@@ -10,6 +10,8 @@ export class OrdenarComponent {
 
 
   eMaiuscula: boolean = true;
+  ordenarPor: string = 'nome';
+
   herois: Heroi[] = [
     {
       nome: 'Superman',
@@ -35,5 +37,9 @@ export class OrdenarComponent {
 
   aplicarMaiuscula() {
     this.eMaiuscula = !this.eMaiuscula;
+  }
+
+  ordenar(valor: string) {
+    this.ordenarPor = valor;
   }
 }
